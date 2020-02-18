@@ -11,25 +11,29 @@ https://github.com/serverless/examples/tree/master/aws-java-simple-http-endpoint
 
 https://nodejs.org/en/download/
 
-https://console.aws.amazon.com/lambda/home?region=us-east-1#/applications
+https://console.aws.amazon.com/lambda/home?region=us-east-1#/applications    
 
-https://github.com/serverless/serverless/blob/master/docs/providers/aws/guide/credentials.md
-export AWS_ACCESS_KEY_ID=<your-key-here>
-export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
+https://github.com/serverless/serverless/blob/master/docs/providers/aws/guide/credentials.md    
+```ssh 
+export AWS_ACCESS_KEY_ID=<your-key-here>    
+export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>    
+```
 
-mkdir .aws
-vim credentials
-
+```ssh
+mkdir .aws    
+vim credentials    
 [endava-med-aws]
 aws_access_key_id = <your-key-here>
 aws_secret_access_key = <your-secret-key-here>
+```
 
+```ssh
 serverless deploy --aws-profile endava-med-aws
 
 curl https://zf6oolkvn6.execute-api.us-east-1.amazonaws.com/dev/ping
 
 serverless remove --aws-profile endava-med-aws
-
+```
 
 Learning Objectives
 check_circle
